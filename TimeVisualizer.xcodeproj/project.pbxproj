@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D493F1D6375C62597B22FF2 /* Pods_TimeVisualizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2346B08F9101B441428A1C /* Pods_TimeVisualizer.framework */; };
+		7E7B48D8A9C81AFD57061FF9 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90B0AD01550D5672AC3624 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework */; };
 		8432D14C276D14250029C3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14B276D14250029C3F1 /* AppDelegate.swift */; };
 		8432D14E276D14250029C3F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14D276D14250029C3F1 /* SceneDelegate.swift */; };
 		8432D150276D14250029C3F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14F276D14250029C3F1 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 		8432D166276D14280029C3F1 /* TimeVisualizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D165276D14280029C3F1 /* TimeVisualizerTests.swift */; };
 		8432D170276D14280029C3F1 /* TimeVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D16F276D14280029C3F1 /* TimeVisualizerUITests.swift */; };
 		8432D172276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D171276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift */; };
+		8432D17F276E123B0029C3F1 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D17E276E123B0029C3F1 /* ChartsViewController.swift */; };
+		98601EFF70F7CC2BBC23CFCA /* Pods_TimeVisualizerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8346D9DFA3C99D8A9E187888 /* Pods_TimeVisualizerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E90B0AD01550D5672AC3624 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeVisualizer_TimeVisualizerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		278C362601C08D99B03E9050 /* Pods-TimeVisualizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizerTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33352E006CE7450921008181 /* Pods-TimeVisualizer-TimeVisualizerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer-TimeVisualizerUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3B0164FF735030202973DA1F /* Pods-TimeVisualizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizerTests.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F2346B08F9101B441428A1C /* Pods_TimeVisualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeVisualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1397C8B2C1C0C7DC37FBCF /* Pods-TimeVisualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer.debug.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer.debug.xcconfig"; sourceTree = "<group>"; };
+		8346D9DFA3C99D8A9E187888 /* Pods_TimeVisualizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeVisualizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8432D148276D14250029C3F1 /* TimeVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8432D14B276D14250029C3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8432D14D276D14250029C3F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +62,9 @@
 		8432D16B276D14280029C3F1 /* TimeVisualizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeVisualizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8432D16F276D14280029C3F1 /* TimeVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeVisualizerUITests.swift; sourceTree = "<group>"; };
 		8432D171276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeVisualizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8432D17E276E123B0029C3F1 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		9B6EC14DA75BAFBE8D6B9687 /* Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA5C89B8D3345433780078C3 /* Pods-TimeVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D493F1D6375C62597B22FF2 /* Pods_TimeVisualizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98601EFF70F7CC2BBC23CFCA /* Pods_TimeVisualizerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7B48D8A9C81AFD57061FF9 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81591B324258C7A7CBD7A768 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F2346B08F9101B441428A1C /* Pods_TimeVisualizer.framework */,
+				0E90B0AD01550D5672AC3624 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework */,
+				8346D9DFA3C99D8A9E187888 /* Pods_TimeVisualizerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8432D13F276D14250029C3F1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				8432D164276D14280029C3F1 /* TimeVisualizerTests */,
 				8432D16E276D14280029C3F1 /* TimeVisualizerUITests */,
 				8432D149276D14250029C3F1 /* Products */,
+				E97A4CF3E57B9AE4D9DF91FD /* Pods */,
+				81591B324258C7A7CBD7A768 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +132,7 @@
 			children = (
 				8432D14B276D14250029C3F1 /* AppDelegate.swift */,
 				8432D14D276D14250029C3F1 /* SceneDelegate.swift */,
+				8432D17E276E123B0029C3F1 /* ChartsViewController.swift */,
 				8432D14F276D14250029C3F1 /* ViewController.swift */,
 				8432D151276D14250029C3F1 /* Main.storyboard */,
 				8432D157276D14280029C3F1 /* Assets.xcassets */,
@@ -130,6 +160,19 @@
 			path = TimeVisualizerUITests;
 			sourceTree = "<group>";
 		};
+		E97A4CF3E57B9AE4D9DF91FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B1397C8B2C1C0C7DC37FBCF /* Pods-TimeVisualizer.debug.xcconfig */,
+				AA5C89B8D3345433780078C3 /* Pods-TimeVisualizer.release.xcconfig */,
+				9B6EC14DA75BAFBE8D6B9687 /* Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig */,
+				33352E006CE7450921008181 /* Pods-TimeVisualizer-TimeVisualizerUITests.release.xcconfig */,
+				278C362601C08D99B03E9050 /* Pods-TimeVisualizerTests.debug.xcconfig */,
+				3B0164FF735030202973DA1F /* Pods-TimeVisualizerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8432D175276D14280029C3F1 /* Build configuration list for PBXNativeTarget "TimeVisualizer" */;
 			buildPhases = (
+				9F0B130DFC90C1EE94FB4E58 /* [CP] Check Pods Manifest.lock */,
 				8432D144276D14250029C3F1 /* Sources */,
 				8432D145276D14250029C3F1 /* Frameworks */,
 				8432D146276D14250029C3F1 /* Resources */,
+				1F1ACEDC7E38DD845A1D012E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8432D178276D14280029C3F1 /* Build configuration list for PBXNativeTarget "TimeVisualizerTests" */;
 			buildPhases = (
+				2D4BA43617D3110C069BD0B2 /* [CP] Check Pods Manifest.lock */,
 				8432D15D276D14280029C3F1 /* Sources */,
 				8432D15E276D14280029C3F1 /* Frameworks */,
 				8432D15F276D14280029C3F1 /* Resources */,
@@ -172,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8432D17B276D14280029C3F1 /* Build configuration list for PBXNativeTarget "TimeVisualizerUITests" */;
 			buildPhases = (
+				A7A4E1FD1648ADCC955B9EE4 /* [CP] Check Pods Manifest.lock */,
 				8432D167276D14280029C3F1 /* Sources */,
 				8432D168276D14280029C3F1 /* Frameworks */,
 				8432D169276D14280029C3F1 /* Resources */,
+				50434DF7E29C256B2EE4AD2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,12 +304,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F1ACEDC7E38DD845A1D012E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D4BA43617D3110C069BD0B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeVisualizerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50434DF7E29C256B2EE4AD2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0B130DFC90C1EE94FB4E58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeVisualizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A4E1FD1648ADCC955B9EE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeVisualizer-TimeVisualizerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8432D144276D14250029C3F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8432D156276D14250029C3F1 /* TimeVisualizer.xcdatamodeld in Sources */,
+				8432D17F276E123B0029C3F1 /* ChartsViewController.swift in Sources */,
 				8432D150276D14250029C3F1 /* ViewController.swift in Sources */,
 				8432D14C276D14250029C3F1 /* AppDelegate.swift in Sources */,
 				8432D14E276D14250029C3F1 /* SceneDelegate.swift in Sources */,
@@ -438,6 +590,7 @@
 		};
 		8432D176276D14280029C3F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B1397C8B2C1C0C7DC37FBCF /* Pods-TimeVisualizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +619,7 @@
 		};
 		8432D177276D14280029C3F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA5C89B8D3345433780078C3 /* Pods-TimeVisualizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +648,7 @@
 		};
 		8432D179276D14280029C3F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278C362601C08D99B03E9050 /* Pods-TimeVisualizerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +669,7 @@
 		};
 		8432D17A276D14280029C3F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0164FF735030202973DA1F /* Pods-TimeVisualizerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +690,7 @@
 		};
 		8432D17C276D14280029C3F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6EC14DA75BAFBE8D6B9687 /* Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +709,7 @@
 		};
 		8432D17D276D14280029C3F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33352E006CE7450921008181 /* Pods-TimeVisualizer-TimeVisualizerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

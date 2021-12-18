@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func addButton(_ sender: UIButton) {
+        let chartsViewController = ChartsViewController()
+//        let chartsViewController = storyboard?.instantiateViewController(withIdentifier: "another") as! ChartsViewController
+        self.present(chartsViewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(chartsViewController, animated: true)
+    }
+    
 }
 
