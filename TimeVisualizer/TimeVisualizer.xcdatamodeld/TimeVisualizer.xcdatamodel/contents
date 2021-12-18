@@ -7,18 +7,8 @@
         <relationship name="timeInDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Times" inverseName="inDay" inverseEntity="Times"/>
     </entity>
     <entity name="Times" representedClassName="Times" syncable="YES" codeGenerationType="class">
-        <attribute name="eight" optional="YES" attributeType="String"/>
-        <attribute name="eightThirty" optional="YES" attributeType="String"/>
-        <attribute name="five" optional="YES" attributeType="String"/>
-        <attribute name="fiveThirty" optional="YES" attributeType="String"/>
-        <attribute name="four" optional="YES" attributeType="String"/>
-        <attribute name="fourThirty" optional="YES" attributeType="String"/>
-        <attribute name="nine" optional="YES" attributeType="String"/>
-        <attribute name="nineThirty" optional="YES" attributeType="String"/>
-        <attribute name="seven" optional="YES" attributeType="String"/>
-        <attribute name="sevenThirty" optional="YES" attributeType="String"/>
-        <attribute name="six" optional="YES" attributeType="String"/>
-        <attribute name="sixThirty" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
         <relationship name="inDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Days" inverseName="timeInDay" inverseEntity="Days"/>
     </entity>
     <entity name="Week" representedClassName="Week" syncable="YES" codeGenerationType="class">
@@ -28,6 +18,6 @@
     <elements>
         <element name="Week" positionX="-63" positionY="-18" width="128" height="59"/>
         <element name="Days" positionX="-54" positionY="0" width="128" height="89"/>
-        <element name="Times" positionX="-36" positionY="9" width="128" height="224"/>
+        <element name="Times" positionX="-36" positionY="9" width="128" height="74"/>
     </elements>
 </model>

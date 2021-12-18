@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol ControllDelegate: AnyObject {
-    func keywordPassing(keyword: String, backColor: UIColor)
+    func keywordPassing(keyword: String, backColor: UIColor, indexPath: NSIndexPath)
 }

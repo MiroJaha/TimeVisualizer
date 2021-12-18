@@ -10,6 +10,7 @@ import UIKit
 class KeywordsViewController: UIViewController {
     
     var controllDelegate: ControllDelegate?
+    var indexPath: NSIndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,20 +20,21 @@ class KeywordsViewController: UIViewController {
     
     @IBAction func keywordsButton(_ sender: UIButton) {
         guard let backColor = sender.titleColor(for: .normal) else { return }
+        guard let indexPath = self.indexPath else { return }
         
         switch sender.tag {
         case 1:
-            controllDelegate?.keywordPassing(keyword: "ios", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "ios", backColor: backColor, indexPath: indexPath)
         case 2:
-            controllDelegate?.keywordPassing(keyword: "swift", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "swift", backColor: backColor, indexPath: indexPath)
         case 3:
-            controllDelegate?.keywordPassing(keyword: "algorithms", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "algorithms", backColor: backColor, indexPath: indexPath)
         case 4:
-            controllDelegate?.keywordPassing(keyword: "data structures", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "data structures", backColor: backColor, indexPath: indexPath)
         case 5:
-            controllDelegate?.keywordPassing(keyword: "uikit", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "uikit", backColor: backColor, indexPath: indexPath)
         case 6:
-            controllDelegate?.keywordPassing(keyword: "swift ui", backColor: backColor)
+            controllDelegate?.keywordPassing(keyword: "swift ui", backColor: backColor, indexPath: indexPath)
         default:
             return
         }

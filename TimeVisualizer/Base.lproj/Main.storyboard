@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="9cZ-G4-849" customClass="KeywordsViewController" customModule="TimeVisualizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGM-Ul-hZ9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-g9-DMy">
-                                <rect key="frame" x="0.0" y="144" width="414" height="318"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="308"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOx-6B-CsO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-qZ-kSL">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="102.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="ios">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -34,59 +34,74 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwZ-rQ-LmC">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="102.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="swift">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keywordsButton:" destination="9cZ-G4-849" eventType="touchUpInside" id="cUR-Do-omk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTa-fw-IDv">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="414" height="103"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntl-lg-fnh">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="103"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="algorithms">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keywordsButton:" destination="9cZ-G4-849" eventType="touchUpInside" id="afV-2W-Ac4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdi-Jp-5jU">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="103"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="data structures">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keywordsButton:" destination="9cZ-G4-849" eventType="touchUpInside" id="NL4-ez-Rtn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAM-iE-EHP">
-                                        <rect key="frame" x="0.0" y="212" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="414" height="102.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-nO-SQA">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="102.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="uikit">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keywordsButton:" destination="9cZ-G4-849" eventType="touchUpInside" id="L7P-U9-JFe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zx2-qS-Tan">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="106"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="102.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="swift ui">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keywordsButton:" destination="9cZ-G4-849" eventType="touchUpInside" id="E1i-Cm-xPh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keywords" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpT-cd-GJW">
-                                <rect key="frame" x="0.0" y="104" width="414" height="26.5"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,7 +175,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilw-5r-b1V">
                                                     <rect key="frame" x="10" y="10" width="394" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KvO-Au-x7R">
@@ -179,6 +194,7 @@
                                                 <constraint firstItem="ilw-5r-b1V" firstAttribute="top" secondItem="c1I-Je-Fwv" secondAttribute="top" constant="10" id="rqs-Q7-hfw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="taskTextfieald" destination="KvO-Au-x7R" id="sKg-HC-cwo"/>
                                             <outlet property="timeLabel" destination="ilw-5r-b1V" id="X8R-k5-tZ5"/>
@@ -201,6 +217,10 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="dc2-bl-1T5" id="ncv-eK-9jd"/>
+                        <segue destination="9cZ-G4-849" kind="presentation" identifier="addKeyword" id="2nk-rl-lIK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
