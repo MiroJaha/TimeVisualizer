@@ -25,6 +25,7 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         return button
     }()
     var chartView = UIView()
+    var chartValues = [(String, Int)]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,11 +88,14 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         var entries = [ChartDataEntry]()
         entries.append(ChartDataEntry(x: 10, y: 10))
         entries.append(ChartDataEntry(x: 20, y: 20))
-        
         let dataSet = LineChartDataSet(entries: entries, label: "")
         dataSet.colors = [.systemCyan, .blue, .purple, .systemCyan, .blue, .purple]
         let data = LineChartData(dataSet: dataSet)
         lineChart.data = data
+    }
+    
+    func calculatingTotal() {
+        
     }
     
 }

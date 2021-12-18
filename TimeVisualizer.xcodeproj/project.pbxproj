@@ -11,7 +11,7 @@
 		7E7B48D8A9C81AFD57061FF9 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90B0AD01550D5672AC3624 /* Pods_TimeVisualizer_TimeVisualizerUITests.framework */; };
 		8432D14C276D14250029C3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14B276D14250029C3F1 /* AppDelegate.swift */; };
 		8432D14E276D14250029C3F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14D276D14250029C3F1 /* SceneDelegate.swift */; };
-		8432D150276D14250029C3F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14F276D14250029C3F1 /* ViewController.swift */; };
+		8432D150276D14250029C3F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D14F276D14250029C3F1 /* MainViewController.swift */; };
 		8432D153276D14250029C3F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8432D151276D14250029C3F1 /* Main.storyboard */; };
 		8432D156276D14250029C3F1 /* TimeVisualizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8432D154276D14250029C3F1 /* TimeVisualizer.xcdatamodeld */; };
 		8432D158276D14280029C3F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8432D157276D14280029C3F1 /* Assets.xcassets */; };
@@ -20,6 +20,9 @@
 		8432D170276D14280029C3F1 /* TimeVisualizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D16F276D14280029C3F1 /* TimeVisualizerUITests.swift */; };
 		8432D172276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D171276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift */; };
 		8432D17F276E123B0029C3F1 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D17E276E123B0029C3F1 /* ChartsViewController.swift */; };
+		8432D181276E78920029C3F1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D180276E78920029C3F1 /* CustomTableViewCell.swift */; };
+		8432D183276E7BCB0029C3F1 /* KeywordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D182276E7BCB0029C3F1 /* KeywordsViewController.swift */; };
+		8432D185276E7F640029C3F1 /* ControllDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432D184276E7F640029C3F1 /* ControllDelegate.swift */; };
 		98601EFF70F7CC2BBC23CFCA /* Pods_TimeVisualizerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8346D9DFA3C99D8A9E187888 /* Pods_TimeVisualizerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +54,7 @@
 		8432D148276D14250029C3F1 /* TimeVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8432D14B276D14250029C3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8432D14D276D14250029C3F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8432D14F276D14250029C3F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8432D14F276D14250029C3F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8432D152276D14250029C3F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8432D155276D14250029C3F1 /* TimeVisualizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeVisualizer.xcdatamodel; sourceTree = "<group>"; };
 		8432D157276D14280029C3F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		8432D16F276D14280029C3F1 /* TimeVisualizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeVisualizerUITests.swift; sourceTree = "<group>"; };
 		8432D171276D14280029C3F1 /* TimeVisualizerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeVisualizerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8432D17E276E123B0029C3F1 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		8432D180276E78920029C3F1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8432D182276E7BCB0029C3F1 /* KeywordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsViewController.swift; sourceTree = "<group>"; };
+		8432D184276E7F640029C3F1 /* ControllDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllDelegate.swift; sourceTree = "<group>"; };
 		9B6EC14DA75BAFBE8D6B9687 /* Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer-TimeVisualizerUITests/Pods-TimeVisualizer-TimeVisualizerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA5C89B8D3345433780078C3 /* Pods-TimeVisualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeVisualizer.release.xcconfig"; path = "Target Support Files/Pods-TimeVisualizer/Pods-TimeVisualizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,8 +138,11 @@
 			children = (
 				8432D14B276D14250029C3F1 /* AppDelegate.swift */,
 				8432D14D276D14250029C3F1 /* SceneDelegate.swift */,
+				8432D180276E78920029C3F1 /* CustomTableViewCell.swift */,
+				8432D184276E7F640029C3F1 /* ControllDelegate.swift */,
+				8432D182276E7BCB0029C3F1 /* KeywordsViewController.swift */,
 				8432D17E276E123B0029C3F1 /* ChartsViewController.swift */,
-				8432D14F276D14250029C3F1 /* ViewController.swift */,
+				8432D14F276D14250029C3F1 /* MainViewController.swift */,
 				8432D151276D14250029C3F1 /* Main.storyboard */,
 				8432D157276D14280029C3F1 /* Assets.xcassets */,
 				8432D159276D14280029C3F1 /* LaunchScreen.storyboard */,
@@ -412,9 +421,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432D181276E78920029C3F1 /* CustomTableViewCell.swift in Sources */,
+				8432D185276E7F640029C3F1 /* ControllDelegate.swift in Sources */,
 				8432D156276D14250029C3F1 /* TimeVisualizer.xcdatamodeld in Sources */,
 				8432D17F276E123B0029C3F1 /* ChartsViewController.swift in Sources */,
-				8432D150276D14250029C3F1 /* ViewController.swift in Sources */,
+				8432D183276E7BCB0029C3F1 /* KeywordsViewController.swift in Sources */,
+				8432D150276D14250029C3F1 /* MainViewController.swift in Sources */,
 				8432D14C276D14250029C3F1 /* AppDelegate.swift in Sources */,
 				8432D14E276D14250029C3F1 /* SceneDelegate.swift in Sources */,
 			);

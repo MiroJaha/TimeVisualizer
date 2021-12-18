@@ -14,7 +14,6 @@
 		06CFC46BE26FFCF48FAC3BC758C1B73A /* Platform+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C772E5330CFA8563393FB3B93F49D19 /* Platform+Accessibility.swift */; };
 		07F36B6C00E133D649E548A6AE58B961 /* BarChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ACD76E884D121786129799A6C62A6 /* BarChartDataEntry.swift */; };
 		08314FED196A4110DD9C04BE68B0E47E /* PieChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE39773953A05362EED2186FC542B9D /* PieChartData.swift */; };
-		0B2AB1C10C8853458B703D41B0DB89BB /* Pods-TimeVisualizerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27958933DF1B94B74A02ED4112022B3F /* Pods-TimeVisualizerTests-dummy.m */; };
 		15391F71EADBAB938B40B231A1374163 /* RadarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2906C15E4AAF238B01D2F3816A9E94A2 /* RadarChartData.swift */; };
 		165715FCC785392EC902B9C337DEFD5F /* DefaultFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5714A0027C8A21F4A61B3E0273D37E /* DefaultFillFormatter.swift */; };
 		17517270B8F89B22DCBBA0CAAE8CE406 /* Platform+Touch Handling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A179508508A4EEFB527CAA42968E9197 /* Platform+Touch Handling.swift */; };
@@ -54,7 +53,6 @@
 		5160015BAA1E3D6625AA6B06D0DBC62F /* LegendRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229399F00599645CBD267A0FC0A07E0 /* LegendRenderer.swift */; };
 		543F10D9E7814D34DBF2795E226064C7 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8836136B3D1D17F9D3F8B9D95D3388 /* Description.swift */; };
 		5582A07693A96003E2A57BE02E85F4D0 /* LineScatterCandleRadarChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E07622026A5A5E75F286CB850C568 /* LineScatterCandleRadarChartDataSet.swift */; };
-		577275684D04C1DFF752CA60EA3370D7 /* Pods-TimeVisualizerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE7A8A0C7B683D718ECB5D86B8282C58 /* Pods-TimeVisualizerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5897691316B28D32CC22DB1C6E9B7B59 /* ILineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF31F6C01D1D5CEBABFF06A1EA53B83 /* ILineChartDataSet.swift */; };
 		58AAEB01B433007FADCAEAB4D5D0B429 /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571799E2B70E3638C50E190BCF7FC1A /* DataApproximator.swift */; };
 		59342CF79E5E84C9DE6BD1FD7B215980 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465B7BFAAE224331E14F0E3E4D7BA0C /* BarChartData.swift */; };
@@ -126,7 +124,6 @@
 		BC4E2C4B98A01201B02C1E30F33AFBE8 /* IChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A1BECA75869F0E182193909DF7598 /* IChartDataSet.swift */; };
 		BCA0EE0159F3155D8A9E69E46800AD26 /* ZoomViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD294FABA663DD42E0A312B4ACAF1B /* ZoomViewJob.swift */; };
 		BCA99867D8A6C751738034F62D83AA42 /* XShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116AB9BF75A2A772277869CDD16CFD5 /* XShapeRenderer.swift */; };
-		BE4C02656B0B5A2E5959CC9DEF361AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		BEA40430CC80CB741BAE8DBFFC419B80 /* IFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA427B68ADA2432EB0ADB4B261CC04A9 /* IFillFormatter.swift */; };
 		BEC396661FEFEB41C4B974D8E2AAA14C /* CandleStickChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9005CEE4CD5BB4E50C3379F8C7D2F /* CandleStickChartRenderer.swift */; };
 		C029C7B9079693B4CCF69A08C84173C5 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31DE9FFC8BF98D4EA3157F618246059 /* BarChartView.swift */; };
@@ -168,13 +165,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
 			remoteInfo = Charts;
-		};
-		42E76C5C6D1802D94C95E2AC425B8F3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AB39C5B9B387C6E0E0F170C71AEC4B2;
-			remoteInfo = "Pods-TimeVisualizer";
 		};
 		AF305D5FA1AF758535C90FD4603488E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -322,7 +312,6 @@
 		BF52BC3A519D9360BCA9A79F7B7C7554 /* ScatterChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterChartDataProvider.swift; path = Source/Charts/Interfaces/ScatterChartDataProvider.swift; sourceTree = "<group>"; };
 		C1C4B267A4820A775520B1F23ECE97E0 /* ILineRadarChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ILineRadarChartDataSet.swift; path = Source/Charts/Data/Interfaces/ILineRadarChartDataSet.swift; sourceTree = "<group>"; };
 		C31B2E725A4348245879C65C5AD19C45 /* Pods-TimeVisualizer-TimeVisualizerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimeVisualizer-TimeVisualizerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C3BE2F736320728E0C9FEF53093AF207 /* Pods-TimeVisualizerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TimeVisualizerTests"; path = Pods_TimeVisualizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5897474AEA16E800F2C6B7A4D99C8D6 /* Pods-TimeVisualizer-TimeVisualizerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimeVisualizer-TimeVisualizerUITests-Info.plist"; sourceTree = "<group>"; };
 		C6173E76B956E7C1315DEA28B19CA44C /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartAnimationEasing.swift; path = Source/Charts/Animation/ChartAnimationEasing.swift; sourceTree = "<group>"; };
 		C703A25169E5D43CAD96BBA0AAC69C53 /* YAxisRendererHorizontalBarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YAxisRendererHorizontalBarChart.swift; path = Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift; sourceTree = "<group>"; };
@@ -384,14 +373,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		530CAB864504937EC2E91E35BC9960F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE4C02656B0B5A2E5959CC9DEF361AE9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E13D5596F3FD28FB54AAB132061B48A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,7 +390,6 @@
 				A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */,
 				A90BB1AED7F4CD8651469006CCBDCA1B /* Pods-TimeVisualizer */,
 				2516A5245620AB791A18ECD5E060816D /* Pods-TimeVisualizer-TimeVisualizerUITests */,
-				C3BE2F736320728E0C9FEF53093AF207 /* Pods-TimeVisualizerTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -683,14 +663,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		62F7216D3EF124708969A40D01DD27A7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				577275684D04C1DFF752CA60EA3370D7 /* Pods-TimeVisualizerTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DD228547789778D21621CE6781A1E27 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -735,25 +707,6 @@
 			name = "Pods-TimeVisualizer";
 			productName = Pods_TimeVisualizer;
 			productReference = A90BB1AED7F4CD8651469006CCBDCA1B /* Pods-TimeVisualizer */;
-			productType = "com.apple.product-type.framework";
-		};
-		1962BA483B969BCD906E2C239216D40C /* Pods-TimeVisualizerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9975F71DF0BCE7EC5E305ED4631A61EC /* Build configuration list for PBXNativeTarget "Pods-TimeVisualizerTests" */;
-			buildPhases = (
-				62F7216D3EF124708969A40D01DD27A7 /* Headers */,
-				1589842A3D9E1A73F2FD6DE6EE0A09FB /* Sources */,
-				530CAB864504937EC2E91E35BC9960F2 /* Frameworks */,
-				8842758B8DECD1F2344F97C4CC780A6A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C8032DB16C93A4067242CB9A8C9BA09A /* PBXTargetDependency */,
-			);
-			name = "Pods-TimeVisualizerTests";
-			productName = Pods_TimeVisualizerTests;
-			productReference = C3BE2F736320728E0C9FEF53093AF207 /* Pods-TimeVisualizerTests */;
 			productType = "com.apple.product-type.framework";
 		};
 		213E4583B32AA3B189400228CD00912B /* Pods-TimeVisualizer-TimeVisualizerUITests */ = {
@@ -818,7 +771,6 @@
 				BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */,
 				0AB39C5B9B387C6E0E0F170C71AEC4B2 /* Pods-TimeVisualizer */,
 				213E4583B32AA3B189400228CD00912B /* Pods-TimeVisualizer-TimeVisualizerUITests */,
-				1962BA483B969BCD906E2C239216D40C /* Pods-TimeVisualizerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -838,13 +790,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8842758B8DECD1F2344F97C4CC780A6A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FC13E4170BAB67F3E2A8EED88AD437F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -855,14 +800,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1589842A3D9E1A73F2FD6DE6EE0A09FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B2AB1C10C8853458B703D41B0DB89BB /* Pods-TimeVisualizerTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7498FAC781EB8A184CDCF0B26D2A5C37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1036,12 +973,6 @@
 			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
 			targetProxy = AF305D5FA1AF758535C90FD4603488E0 /* PBXContainerItemProxy */;
 		};
-		C8032DB16C93A4067242CB9A8C9BA09A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TimeVisualizer";
-			target = 0AB39C5B9B387C6E0E0F170C71AEC4B2 /* Pods-TimeVisualizer */;
-			targetProxy = 42E76C5C6D1802D94C95E2AC425B8F3F /* PBXContainerItemProxy */;
-		};
 		E63403543B88A158C3213F7AC789DCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
@@ -1088,43 +1019,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		314D94A0D3C63D129EDEAA1AB8D6830B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E0EF1BFB17DADC326EE52796C84102E /* Pods-TimeVisualizerTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1220,44 +1114,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		631CA1FA7882A3458124999E38648719 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A0E7BF65A973D98ECAB79CFD02DD0B2 /* Pods-TimeVisualizerTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TimeVisualizerTests/Pods-TimeVisualizerTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1499,15 +1355,6 @@
 			buildConfigurations = (
 				F78BA090E67CC2A5A5914AF66D298275 /* Debug */,
 				5C1C25482D93B6BA88126BDC6CFE9AB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9975F71DF0BCE7EC5E305ED4631A61EC /* Build configuration list for PBXNativeTarget "Pods-TimeVisualizerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				314D94A0D3C63D129EDEAA1AB8D6830B /* Debug */,
-				631CA1FA7882A3458124999E38648719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

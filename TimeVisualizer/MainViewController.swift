@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var dataList = [Times]()
@@ -19,8 +19,10 @@ class ViewController: UIViewController {
         let date = Date()
         let formatedDate = DateFormatter()
         formatedDate.dateStyle = .short
-        
         formatedDate.timeStyle = .none
+        var setDate = formatedDate.string(from: date)
+        setDate.removeLast(6)
+        print(setDate)
     }
     
     func fetchingData() {
@@ -59,4 +61,3 @@ class ViewController: UIViewController {
     }
     
 }
-
