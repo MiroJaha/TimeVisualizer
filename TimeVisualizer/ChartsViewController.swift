@@ -118,14 +118,18 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         dataSet.drawFilledEnabled = true
         let data = RadarChartData(dataSet: dataSet)
         radarChart.data = data
-        //radarChart.legend.xEntrySpace = 55
+        
+        radarChart.legend.entries = legend
+        radarChart.legend.yEntrySpace = 2
+        radarChart.legend.verticalAlignment = .bottom
+        radarChart.legend.orientation = .vertical
+        legend.removeLast()
+        legend.removeLast()
         radarChart.legend.extraEntries = legend
-        //radarChart.legend.entries = legend
-        radarChart.legend.horizontalAlignment = .center
+        radarChart.legend.horizontalAlignment = .left
         
         radarChart.rotationEnabled = false
         radarChart.backgroundColor = .white
-        
     }
     
     func setUpSwitchButton() {
