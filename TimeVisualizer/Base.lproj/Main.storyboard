@@ -116,7 +116,7 @@
                             <constraint firstItem="NGe-g9-DMy" firstAttribute="leading" secondItem="0Jw-yE-P2w" secondAttribute="leading" id="GQE-3D-C77"/>
                             <constraint firstItem="lpT-cd-GJW" firstAttribute="leading" secondItem="0Jw-yE-P2w" secondAttribute="leading" id="N1G-s0-LpB"/>
                             <constraint firstItem="0Jw-yE-P2w" firstAttribute="trailing" secondItem="lpT-cd-GJW" secondAttribute="trailing" id="aY7-ff-3tG"/>
-                            <constraint firstItem="0Jw-yE-P2w" firstAttribute="bottom" secondItem="NGe-g9-DMy" secondAttribute="bottom" constant="400" id="cet-wx-Ore"/>
+                            <constraint firstItem="0Jw-yE-P2w" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="NGe-g9-DMy" secondAttribute="bottom" constant="400" id="cet-wx-Ore"/>
                             <constraint firstItem="NGe-g9-DMy" firstAttribute="top" secondItem="0Jw-yE-P2w" secondAttribute="top" constant="100" id="wph-64-aHg"/>
                         </constraints>
                     </view>
@@ -218,6 +218,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dayPickerView" destination="bxr-yh-2or" id="mXO-Mz-2lT"/>
                         <outlet property="mainTableView" destination="dc2-bl-1T5" id="ncv-eK-9jd"/>
                         <segue destination="9cZ-G4-849" kind="presentation" identifier="addKeyword" id="2nk-rl-lIK"/>
                     </connections>
