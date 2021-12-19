@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
         
         mainTableView.dataSource = self
         mainTableView.delegate = self
-        mainTableView.rowHeight = 130
+        mainTableView.rowHeight = 90
         addTableView.dataSource = self
         addTableView.delegate = self
         addTableView.register(CustomAddTableViewCell.self, forCellReuseIdentifier: "addCell")
@@ -164,6 +164,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == mainTableView{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+            cell.layer.cornerRadius = 10
+            cell.layer.borderWidth = 2
+            cell.layer.borderColor = UIColor.systemOrange.cgColor
             cell.timeLabel.text = data[indexPath.row].time
             cell.taskTextfieald.text = data[indexPath.row].note
             cell.indexPath = indexPath as NSIndexPath
@@ -233,9 +236,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 return 10
             }
         }
-        return 130
+        return 90
     }
-    
 }
 
 extension MainViewController: ControllDelegate {
