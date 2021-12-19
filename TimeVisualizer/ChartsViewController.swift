@@ -12,27 +12,29 @@ import CoreData
 class ChartsViewController: UIViewController, ChartViewDelegate {
     
     var pieChart = PieChartView()
-    var lineChart = LineChartView()
+    var radarChart = RadarChartView()
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var dataList = [Times]()
+    
     var switchButton: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.automaticallyUpdatesConfiguration = false
-        button.setTitle("SWITCH", for: .normal)
-        button.layer.backgroundColor = UIColor.red.cgColor
+        let button = UIButton()
+        button.setTitle("SWITCH CHART", for: .normal)
+        button.layer.backgroundColor = UIColor.systemPink.cgColor
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         return button
     }()
-    var chartView = UIView()
-    var chartValues = [(String, Int)]()
-
+    
+    var chartValues: [(String, Double)] = [("ios", 0),("algorith", 0),("uikit", 0),("swift", 0),("data structures", 0),("swift ui", 0)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
-
+        self.view.backgroundColor = .black
+        
         pieChart.delegate = self
         
+        fetchingData()
     }
     
     func fetchingData() {
@@ -42,36 +44,47 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         }catch {
             print(error)
         }
+        for dataList in dataList {
+            for chartValue in 0..<chartValues.count{
+                if let check = dataList.note?.contains(chartValues[chartValue].0){
+                    if check{
+                        chartValues[chartValue].1 += 1
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        chartView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
-        view.addSubview(chartView)
-        
         setUpPieChart()
-        chartView.addSubview(pieChart)
-        pieChart.isHidden = true
+        view.addSubview(pieChart)
+        pieChart.isHidden = false
 
-        setUpLineChart()
-        chartView.addSubview(lineChart)
-        lineChart.isHidden = false
+        setUpRadarChart()
+        view.addSubview(radarChart)
+        radarChart.isHidden = true
+        
+        setUpSwitchButton()
+        view.addSubview(switchButton)
+        
     }
     
     func setUpPieChart() {
-        pieChart.frame = CGRect(x: 0, y: 0, width: self.chartView.frame.width, height: self.chartView.frame.width)
+        pieChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 100)
         var entries = [PieChartDataEntry]()
-        entries.append(PieChartDataEntry(value: Double(10),label: "IOS"))
-        entries.append(PieChartDataEntry(value: Double(10),label: "algoriths"))
-        entries.append(PieChartDataEntry(value: Double(10),label: "uikit"))
-        entries.append(PieChartDataEntry(value: Double(10),label: "swiftt"))
-        entries.append(PieChartDataEntry(value: Double(10),label: "data structures"))
-        entries.append(PieChartDataEntry(value: Double(10),label: "swift ui"))
+        for chartValue in chartValues{
+            entries.append(PieChartDataEntry(value: chartValue.1, label: chartValue.0))
+        }
         let dataSet = PieChartDataSet(entries: entries, label: "")
         dataSet.colors = [.systemCyan, .blue, .purple, .systemCyan, .blue, .purple]
         let data = PieChartData(dataSet: dataSet)
         pieChart.data = data
+        pieChart.legend.horizontalAlignment = .center
+        pieChart.holeColor = .white
+        pieChart.backgroundColor = .white
+        pieChart.legend.textColor = .black
         //pieChart.chartDescription?.enabled = false
         //pieChart.drawHoleEnabled = false //To Add Hole in the Middle
         pieChart.rotationAngle = 0
@@ -83,19 +96,54 @@ class ChartsViewController: UIViewController, ChartViewDelegate {
         pieChart.usePercentValuesEnabled = true
     }
     
-    func setUpLineChart() {
-        lineChart.frame = CGRect(x: 0, y: 0, width: self.chartView.frame.width, height: self.chartView.frame.width)
-        var entries = [ChartDataEntry]()
-        entries.append(ChartDataEntry(x: 10, y: 10))
-        entries.append(ChartDataEntry(x: 20, y: 20))
-        let dataSet = LineChartDataSet(entries: entries, label: "")
-        dataSet.colors = [.systemCyan, .blue, .purple, .systemCyan, .blue, .purple]
-        let data = LineChartData(dataSet: dataSet)
-        lineChart.data = data
+    func setUpRadarChart() {
+        radarChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 100)
+        var entries = [RadarChartDataEntry]()
+        var legend = [LegendEntry]()
+        for chartValue in chartValues{
+            entries.append(RadarChartDataEntry(value: chartValue.1))
+            legend.append(LegendEntry())
+        }
+        let colors = [UIColor.systemCyan, UIColor.blue, UIColor.purple, UIColor.systemCyan, UIColor.blue, UIColor.purple]
+        for x in 0..<chartValues.count{
+            legend[x].label = chartValues[x].0
+            legend[x].form = .square
+            legend[x].formColor = colors[x]
+            legend[x].formSize = 10
+        }
+        
+        let dataSet = RadarChartDataSet(entries: entries, label: "")
+        dataSet.colors = colors
+        dataSet.fillColor = UIColor.red
+        dataSet.drawFilledEnabled = true
+        let data = RadarChartData(dataSet: dataSet)
+        radarChart.data = data
+        //radarChart.legend.xEntrySpace = 55
+        radarChart.legend.extraEntries = legend
+        //radarChart.legend.entries = legend
+        radarChart.legend.horizontalAlignment = .center
+        
+        radarChart.rotationEnabled = false
+        radarChart.backgroundColor = .white
+        
     }
     
-    func calculatingTotal() {
-        
+    func setUpSwitchButton() {
+        switchButton.frame = CGRect(x: 0, y: self.view.frame.height - 75, width: self.view.frame.width, height: 50)
+        switchButton.layer.cornerRadius = 20
+        switchButton.layer.borderColor = UIColor.red.cgColor
+        switchButton.layer.borderWidth = 2
+        switchButton.addTarget(self, action: #selector(switchChart), for: .touchUpInside)
+    }
+    
+    @objc func switchChart() {
+        if pieChart.isHidden {
+            pieChart.isHidden = false
+            radarChart.isHidden = true
+        }else {
+            pieChart.isHidden = true
+            radarChart.isHidden = false
+        }
     }
     
 }

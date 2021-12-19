@@ -12,12 +12,18 @@ class MainViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let save = (UIApplication.shared.delegate as! AppDelegate).saveContext
-    var weekCount = [Week]()
+    
+    var weekList = [Week]()
     var dataList = [Times]()
     var daysList = [Days]()
+    var data = [Times]()
+    var selectedDay = 0
+    
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var dayPickerView: UIPickerView!
-    var selectedDay = 0
+    var transparentView = UIView()
+    var addTableView = UITableView()
+    var height: CGFloat = 220
     
     let days = ["Saterday","Sunday","Monday","Tuseday","Wednisday","Thursday","Friday"]
     let times = ["4:00","4:30","5:00","5:30","6:00","6:30","7:00","7:30","8:00","8:30","9:00","9:30"]
@@ -25,11 +31,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //startNewWeek()
         fetchingData()
         
         mainTableView.dataSource = self
         mainTableView.delegate = self
+        mainTableView.rowHeight = 130
+        addTableView.dataSource = self
+        addTableView.delegate = self
+        addTableView.register(CustomAddTableViewCell.self, forCellReuseIdentifier: "addCell")
+        addTableView.backgroundColor = .gray
         dayPickerView.delegate = self
         dayPickerView.dataSource = self
     }
@@ -39,13 +49,24 @@ class MainViewController: UIViewController {
         let dataResult: NSFetchRequest<Times> = Times.fetchRequest()
         let daysResult: NSFetchRequest<Days> = Days.fetchRequest()
         do {
-            weekCount = try context.fetch(weekResult)
+            weekList = try context.fetch(weekResult)
             daysList = try context.fetch(daysResult)
             dataList = try context.fetch(dataResult)
         }catch {
             print(error)
         }
-        mainTableView.reloadData()
+        if weekList.isEmpty{
+            startNewWeek()
+        }else {
+            let week = weekList[weekList.count - 1]
+            let day = daysList.filter { day in
+                return day.day! == days[selectedDay] && day.inWeek! == week
+            }
+            data = dataList.filter{ data in
+                return data.inDay! == day[day.count - 1]
+            }
+            mainTableView.reloadData()
+        }
     }
 
     func startNewWeek() {
@@ -58,7 +79,7 @@ class MainViewController: UIViewController {
         var dayDate = Int(setDate)! - 1
         
         let newWeek = Week(context: context)
-        newWeek.weekNumber = Int32(weekCount.count)
+        newWeek.weekNumber = Int32(weekList.count)
         save()
         
         for day in days{
@@ -72,23 +93,52 @@ class MainViewController: UIViewController {
             for time in times{
                 let newData = Times(context: context)
                 newData.inDay = newDay
-                newData.inDay?.inWeek = newWeek
                 newData.time = time
                 newData.note = " "
                 save()
             }
         }
         
-        mainTableView.reloadData()
+        fetchingData()
     }
     
     @IBAction func addButton(_ sender: UIButton) {
+        let window = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .compactMap({$0 as? UIWindowScene})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
         
+        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+        transparentView.frame = self.view.frame
+        window?.addSubview(transparentView)
         
-        let chartsViewController = ChartsViewController()
-//        let chartsViewController = storyboard?.instantiateViewController(withIdentifier: "another") as! ChartsViewController
-        self.present(chartsViewController, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(chartsViewController, animated: true)
+        let screenSize = UIScreen.main.bounds.size
+        addTableView.frame = CGRect(x: 10, y: screenSize.height, width: screenSize.width - 20, height: height)
+        addTableView.layer.cornerRadius = 20
+        //addTableView.rowHeight = 60
+        window?.addSubview(addTableView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action:  #selector(closeTransparentView))
+        transparentView.addGestureRecognizer(tapGesture)
+        
+        transparentView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.transparentView.alpha = 0.5
+            self.addTableView.frame = CGRect(x: 10, y: screenSize.height - self.height, width: screenSize.width - 20, height: self.height)
+            
+        }, completion: nil)
+    }
+    
+    @objc func closeTransparentView() {
+        //let screenSize = UIScreen.main.bounds.size
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            let screenSize = UIScreen.main.bounds.size
+            self.addTableView.frame = CGRect(x: 10, y: screenSize.height, width: screenSize.width - 20, height: self.height)
+            self.transparentView.alpha = 0
+        }, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,33 +154,100 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataList.count > 1{
-            return 7
+        if tableView == mainTableView{
+            return data.count
         }else {
-            return 0
+            return 3
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        cell.timeLabel.text = dataList[indexPath.row].time
-        cell.taskTextfieald.text = dataList[indexPath.row].note
-        return cell
+        if tableView == mainTableView{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+            cell.timeLabel.text = data[indexPath.row].time
+            cell.taskTextfieald.text = data[indexPath.row].note
+            cell.indexPath = indexPath as NSIndexPath
+            cell.controllDelegate = self
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addCell", for: indexPath) as! CustomAddTableViewCell
+            switch indexPath.row{
+            case 0:
+                cell.titleLabel.text = "Clcik Add New Week To Start New Week\nor Clicl View Chart to See Charts"
+            case 1:
+                cell.titleLabel.text = "Add New Week"
+                cell.titleLabel.textColor = .red
+            case 2:
+                cell.titleLabel.text = "View Chart"
+                cell.titleLabel.textColor = .blue
+            default:
+                cell.titleLabel.text = ""
+            }
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "addKeyword", sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        if tableView == mainTableView{
+            performSegue(withIdentifier: "addKeyword", sender: indexPath)
+        }
+        else{
+            switch indexPath.row{
+            case 1:
+                //Set alert Message
+                let alert = UIAlertController(title: "Start New Week ??", message: nil, preferredStyle: .alert)
+                //Styling my aalert
+                alert.view.layer.cornerRadius = 10
+                alert.view.layer.borderWidth = 2
+                alert.view.layer.borderColor = UIColor.red.cgColor
+                //Add Action Buttons to My Alert
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in
+                    return
+                }))
+                alert.addAction(UIAlertAction(title: "Sure", style: .destructive, handler: { action in
+                    self.startNewWeek()
+                    self.closeTransparentView()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            case 2:
+                let chartsViewController = ChartsViewController()
+                self.present(chartsViewController, animated: true, completion: nil)
+                self.closeTransparentView()
+            default:
+                return
+            }
+        }
     }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if tableView == addTableView{
+            switch indexPath.row{
+            case 0:
+                return 100
+            case 1:
+                return 60
+            case 2:
+                return 60
+            default:
+                return 10
+            }
+        }
+        return 130
     }
+    
 }
 
 extension MainViewController: ControllDelegate {
+    func newEntryPassing(string: String, indexPath: NSIndexPath) {
+        data[indexPath.row].note = string
+        save()
+        fetchingData()
+    }
+    
     func keywordPassing(keyword: String, indexPath: NSIndexPath) {
-        guard let currentNote = dataList[indexPath.row].note else { return }
-        dataList[indexPath.row].note = "\(currentNote) \(keyword)"
+        guard let currentNote = data[indexPath.row].note else { return }
+        data[indexPath.row].note = "\(currentNote) \(keyword)"
         save()
         fetchingData()
     }
@@ -155,9 +272,9 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         ])
         return day
     }
-    //Save selected timer
+    //Save selected day
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedDay = row
-        mainTableView.reloadData()
+        fetchingData()
     }
 }

@@ -10,4 +10,5 @@ import UIKit
 
 protocol ControllDelegate: AnyObject {
     func keywordPassing(keyword: String, indexPath: NSIndexPath)
+    func newEntryPassing(string: String, indexPath: NSIndexPath)
 }

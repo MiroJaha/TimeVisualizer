@@ -12,20 +12,19 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var taskTextfieald: UITextField!
     
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        KeywordsViewController().controllDelegate = self
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//    }
+    weak var indexPath: NSIndexPath?
+    weak var controllDelegate: ControllDelegate?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        taskTextfieald.delegate = self
+    }
     
 }
 
-//extension CustomTableViewCell: ControllDelegate {
-//    func keywordPassing(keyword: String, backColor: UIColor) {
-//        taskTextfieald.text = keyword
-//        taskTextfieald.textColor = backColor
-//    }
-//}
+extension CustomTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let note = textField.text else { return }
+        controllDelegate?.newEntryPassing(string: note, indexPath: indexPath!)
+    }
+}

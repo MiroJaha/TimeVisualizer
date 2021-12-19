@@ -3,21 +3,19 @@
     <entity name="Days" representedClassName="Days" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="day" optional="YES" attributeType="String"/>
-        <relationship name="inWeek" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="daysInWeek" inverseEntity="Week"/>
-        <relationship name="timeInDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Times" inverseName="inDay" inverseEntity="Times"/>
+        <relationship name="inWeek" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week"/>
     </entity>
     <entity name="Times" representedClassName="Times" syncable="YES" codeGenerationType="class">
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="time" optional="YES" attributeType="String"/>
-        <relationship name="inDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Days" inverseName="timeInDay" inverseEntity="Days"/>
+        <relationship name="inDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Days"/>
     </entity>
     <entity name="Week" representedClassName="Week" syncable="YES" codeGenerationType="class">
         <attribute name="weekNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="daysInWeek" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Days" inverseName="inWeek" inverseEntity="Days"/>
     </entity>
     <elements>
-        <element name="Week" positionX="-63" positionY="-18" width="128" height="59"/>
-        <element name="Days" positionX="-54" positionY="0" width="128" height="89"/>
+        <element name="Days" positionX="-54" positionY="0" width="128" height="74"/>
         <element name="Times" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="Week" positionX="-63" positionY="-18" width="128" height="44"/>
     </elements>
 </model>
