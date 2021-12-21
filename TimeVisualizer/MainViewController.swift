@@ -132,8 +132,6 @@ class MainViewController: UIViewController {
     }
     
     @objc func closeTransparentView() {
-        //let screenSize = UIScreen.main.bounds.size
-        
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             let screenSize = UIScreen.main.bounds.size
             self.addTableView.frame = CGRect(x: 10, y: screenSize.height, width: screenSize.width - 20, height: self.height)
