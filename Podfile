@@ -6,6 +6,7 @@ target 'TimeVisualizer' do
   use_frameworks!
 
   # Pods for TimeVisualizer
+    pod 'Charts'
 
   target 'TimeVisualizerTests' do
     inherit! :search_paths
@@ -16,6 +17,6 @@ target 'TimeVisualizer' do
     # Pods for testing
   end
 
-  pod 'Charts'
+  # pod 'Charts'
 
 end

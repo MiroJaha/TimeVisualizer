@@ -74,6 +74,7 @@ class MainViewController: UIViewController {
         let formatedDate = DateFormatter()
         formatedDate.dateStyle = .short
         formatedDate.timeStyle = .none
+        formatedDate.locale = Locale(identifier: "en")
         var setDate = formatedDate.string(from: date)
         setDate.removeLast(6)
         var dayDate = Int(setDate)! - 1
