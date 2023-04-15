@@ -175,7 +175,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addCell", for: indexPath) as! CustomAddTableViewCell
             switch indexPath.row{
             case 0:
-                cell.titleLabel.text = "Clcik Add New Week To Start New Week\nor Clicl View Chart to See Charts"
+                cell.titleLabel.text = "Clcik Add New Week To Start New Week\nor Click View Chart to See Charts"
             case 1:
                 cell.titleLabel.text = "Add New Week"
                 cell.titleLabel.textColor = .red
